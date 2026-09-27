@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Accessible public service enterprise dashboard">
+<title>ServiceHub — Dashboard</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="brand"><a href="index.html" aria-label="ServiceHub home">ServiceHub</a></div>
+  <nav aria-label="Primary navigation">
+    <ul class="nav-list">
+      <li><a href="index.html" aria-current="page">Dashboard</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
+</header>
+<div class="layout">
+<aside class="sidebar" aria-label="Dashboard sidebar">
+  <h2>Workspace</h2>
+  <nav aria-label="Dashboard sections">
+    <ul class="sidebar-list">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="services.html">Service directory</a></li>
+      <li><a href="#activity">Recent activity</a></li>
+    </ul>
+  </nav>
+</aside>
+<main id="main-content" tabindex="-1">
+<section id="overview" class="page-heading" aria-labelledby="page-title">
+  <p class="eyebrow">Enterprise dashboard</p>
+  <h1 id="page-title">Service overview</h1>
+  <p>Monitor public services and review current service availability.</p>
+</section>
+<section class="stats-grid" aria-labelledby="summary-title">
+  <h2 id="summary-title" class="sr-only">Service summary</h2>
+  <article class="stat-card"><h3>Total services</h3><p class="stat-value">24</p><p>Registered in the directory</p></article>
+  <article class="stat-card"><h3>Available</h3><p class="stat-value">21</p><p>Currently accepting requests</p></article>
+  <article class="stat-card"><h3>Maintenance</h3><p class="stat-value">3</p><p>Temporarily unavailable</p></article>
+</section>
+<section id="activity" class="panel" aria-labelledby="activity-title">
+  <div class="panel-header"><div><p class="eyebrow">Latest</p><h2 id="activity-title">Recent service activity</h2></div><a class="button button-secondary" href="services.html">View all services</a></div>
+  <div class="table-wrap">
+  <table>
+    <caption class="sr-only">Recent public service activity</caption>
+    <thead><tr><th scope="col">Service</th><th scope="col">Department</th><th scope="col">Status</th></tr></thead>
+    <tbody>
+      <tr><td>Passport Application</td><td>External Affairs</td><td><span class="status status-success">Available</span></td></tr>
+      <tr><td>Income Certificate</td><td>Revenue</td><td><span class="status status-success">Available</span></td></tr>
+      <tr><td>Driving Licence</td><td>Transport</td><td><span class="status status-warning">Maintenance</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+<section class="panel" aria-labelledby="help-title">
+<h2 id="help-title">Need service details?</h2>
+<p>Use the service directory to search, filter, and inspect individual services.</p>
+<button class="button" type="button" id="open-help">Open service help</button>
+<dialog id="help-dialog" aria-labelledby="dialog-title">
+<div class="dialog-content">
+<div class="panel-header"><h2 id="dialog-title">Service directory help</h2><button class="icon-button" type="button" id="close-help" aria-label="Close service help">×</button></div>
+<p>Search by service name or department. Required fields are announced to assistive technologies.</p>
+<button class="button" type="button" id="dialog-done">Done</button>
+</div>
+</dialog>
+</section>
+</main>
+</div>
+<footer class="site-footer"><p>&copy; 2026 ServiceHub. Accessible dashboard foundation.</p></footer>
+<script src="js/app.js" defer></script>
+</body>
+</html>

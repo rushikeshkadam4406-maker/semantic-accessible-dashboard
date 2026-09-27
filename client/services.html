@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Accessible public service directory">
+<title>ServiceHub — Service Directory</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+<div class="brand"><a href="index.html" aria-label="ServiceHub home">ServiceHub</a></div>
+<nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="index.html">Dashboard</a></li><li><a href="services.html" aria-current="page">Services</a></li></ul></nav>
+</header>
+<div class="layout">
+<aside class="sidebar" aria-label="Service directory sidebar">
+<h2>Directory</h2>
+<nav aria-label="Directory sections"><ul class="sidebar-list"><li><a href="#search">Search services</a></li><li><a href="#service-table">All services</a></li></ul></nav>
+</aside>
+<main id="main-content" tabindex="-1">
+<section class="page-heading" aria-labelledby="page-title"><p class="eyebrow">Service directory</p><h1 id="page-title">Find a public service</h1><p>Search the directory using an accessible form and review the results in a structured table.</p></section>
+<section id="search" class="panel" aria-labelledby="search-title">
+<h2 id="search-title">Search and filter</h2>
+<form id="service-form" novalidate>
+<fieldset><legend>Service filters</legend>
+<div class="form-grid">
+<div class="form-field"><label for="service-name">Service name</label><input id="service-name" name="service-name" type="search" autocomplete="off" aria-describedby="service-help" placeholder="e.g. Passport"><small id="service-help">Enter part or all of a service name.</small></div>
+<div class="form-field"><label for="department">Department</label><select id="department" name="department"><option value="">All departments</option><option>External Affairs</option><option>Revenue</option><option>Transport</option><option>Education</option></select></div>
+</div>
+<div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+<div class="button-row"><button class="button" type="submit">Search services</button><button class="button button-secondary" type="reset">Clear filters</button></div>
+</fieldset>
+</form>
+</section>
+<section id="service-table" class="panel" aria-labelledby="table-title">
+<div class="panel-header"><div><p class="eyebrow">Directory results</p><h2 id="table-title">Public services</h2></div><span id="result-count" aria-live="polite">6 services</span></div>
+<div class="table-wrap">
+<table id="services-table">
+<caption class="sr-only">Public service directory with department and availability</caption>
+<thead><tr><th scope="col">Service</th><th scope="col">Department</th><th scope="col">Status</th><th scope="col">Action</th></tr></thead>
+<tbody>
+<tr data-service="Passport Application" data-department="External Affairs"><th scope="row">Passport Application</th><td>External Affairs</td><td><span class="status status-success">Available</span></td><td><button class="text-button details-button" type="button" data-service-name="Passport Application">View details</button></td></tr>
+<tr data-service="Income Certificate" data-department="Revenue"><th scope="row">Income Certificate</th><td>Revenue</td><td><span class="status status-success">Available</span></td><td><button class="text-button details-button" type="button" data-service-name="Income Certificate">View details</button></td></tr>
+<tr data-service="Driving Licence" data-department="Transport"><th scope="row">Driving Licence</th><td>Transport</td><td><span class="status status-warning">Maintenance</span></td><td><button class="text-button details-button" type="button" data-service-name="Driving Licence">View details</button></td></tr>
+<tr data-service="Birth Certificate" data-department="Revenue"><th scope="row">Birth Certificate</th><td>Revenue</td><td><span class="status status-success">Available</span></td><td><button class="text-button details-button" type="button" data-service-name="Birth Certificate">View details</button></td></tr>
+<tr data-service="Scholarship Application" data-department="Education"><th scope="row">Scholarship Application</th><td>Education</td><td><span class="status status-success">Available</span></td><td><button class="text-button details-button" type="button" data-service-name="Scholarship Application">View details</button></td></tr>
+<tr data-service="Vehicle Registration" data-department="Transport"><th scope="row">Vehicle Registration</th><td>Transport</td><td><span class="status status-warning">Maintenance</span></td><td><button class="text-button details-button" type="button" data-service-name="Vehicle Registration">View details</button></td></tr>
+</tbody>
+</table>
+</div>
+<p id="no-results" class="empty-state" hidden>No services match the selected filters.</p>
+</section>
+<dialog id="service-dialog" aria-labelledby="service-dialog-title"><div class="dialog-content"><div class="panel-header"><h2 id="service-dialog-title">Service details</h2><button class="icon-button" type="button" id="close-service-dialog" aria-label="Close service details">×</button></div><p id="service-dialog-description"></p><button class="button" type="button" id="done-service-dialog">Done</button></div></dialog>
+</main>
+</div>
+<footer class="site-footer"><p>&copy; 2026 ServiceHub. Accessible dashboard foundation.</p></footer>
+<script src="js/app.js" defer></script>
+</body>
+</html>
